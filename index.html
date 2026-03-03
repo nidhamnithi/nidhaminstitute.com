@@ -15,9 +15,39 @@
             color: white;
         }
 
+        /* NAVBAR */
+        .navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 20px 40px;
+            box-sizing: border-box;
+            z-index: 10;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-container img {
+            height: 45px;
+        }
+
+        .logo-container span {
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        /* HERO SECTION */
         .hero {
             height: 100vh;
-            background-image: url("bg1.png"); /* your image */
+            background-image: url("bg1.png");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -71,6 +101,10 @@
         }
 
         @media (max-width: 768px) {
+            .logo-container span {
+                font-size: 1rem;
+            }
+
             h1 {
                 font-size: 2rem;
             }
@@ -84,6 +118,15 @@
 
 <body>
 
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="logo-container">
+            <img src="logo.png" alt="Nidham Logo">
+            <span>Nidham Institute of Kathak</span>
+        </div>
+    </div>
+
+    <!-- HERO -->
     <div class="hero">
         <h1>Elevate Your Kathak Experience</h1>
 
