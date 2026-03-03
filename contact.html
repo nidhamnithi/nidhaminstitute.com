@@ -15,8 +15,30 @@
         body {
             margin: 0;
             font-family: 'Forum', serif;
-            background-color: #000;
             color: #F6DEBA;
+        }
+
+        /* Background */
+        .background {
+            min-height: 100vh;
+            background-image: url("bg1.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        /* Dark overlay */
+        .background::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.75);
+        }
+
+        .background > * {
+            position: relative;
+            z-index: 1;
         }
 
         /* NAVBAR */
@@ -24,7 +46,6 @@
             display: flex;
             align-items: center;
             padding: 20px 40px;
-            background: rgba(0,0,0,0.85);
         }
 
         .logo-container {
@@ -45,7 +66,7 @@
         /* PAGE HEADER */
         .page-header {
             text-align: center;
-            padding: 60px 20px 20px 20px;
+            padding: 40px 20px 20px 20px;
         }
 
         .page-header h1 {
@@ -130,6 +151,8 @@
 
 <body>
 
+<div class="background">
+
     <!-- NAVBAR -->
     <div class="navbar">
         <div class="logo-container">
@@ -164,15 +187,22 @@
 
         <!-- CONTACT FORM -->
         <div class="contact-form">
-            <form action="#" method="post">
+            <form action="https://formspree.io/f/meelbdno" method="POST">
+
                 <input type="text" name="name" placeholder="Your Name" required>
+
                 <input type="email" name="email" placeholder="Your Email" required>
+
                 <textarea name="message" placeholder="Your Message" required></textarea>
+
                 <button type="submit">Send Message</button>
+
             </form>
         </div>
 
     </div>
+
+</div>
 
 </body>
 </html>
